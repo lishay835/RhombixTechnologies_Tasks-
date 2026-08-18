@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyBook Library</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MOBILE OVERLAY
+    ========================== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h2>MyBookSpace</h2>
+                    <span>Personal Library Manager</span>
+                </div>
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+
+                <a href="#my-books" class="nav-link" data-section="my-books">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>My Books</span>
+                </a>
+
+                <a href="#categories" class="nav-link" data-section="categories">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Categories</span>
+                </a>
+
+                <a href="#borrow-history" class="nav-link" data-section="borrow-history">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Borrow History</span>
+                </a>
+
+                <a href="#add-book" class="nav-link" data-section="add-book">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <span>Add Book</span>
+                </a>
+
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Sidebar Bottom -->
+        <div class="sidebar-bottom">
+
+            <div class="profile-box">
+
+                <div class="profile-avatar">
+                    <img src="https://i.pravatar.cc/100?img=47" alt="Profile">
+                </div>
+
+                <div class="profile-info">
+                    <strong>Alishba</strong>
+                    <span>Library Member</span>
+                </div>
+
+                <button class="profile-menu">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+
+            </div>
+
+
+            <button class="logout-btn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+
+        <!-- =========================
+             TOP HEADER
+        ========================== -->
+        <header class="top-header">
+
+            <button class="mobile-menu-btn" id="openSidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="mobile-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <div>
+                    <strong>Bookora</strong>
+                    <small>Personal Library Manager</small>
+                </div>
+            </div>
+
+            <div class="header-actions">
+
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="header-profile">
+                    <img src="https://i.pravatar.cc/100?img=47" alt="Alishba">
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             HOME / DASHBOARD
+        ========================== -->
+        <section id="home" class="page-section active-section">
+
+
+            <!-- Welcome Area -->
+            <div class="welcome-section">
+
+                <div class="welcome-content">
+
+                    <span class="welcome-label">
+                        YOUR PERSONAL LIBRARY
+                    </span>
+
+                    <h1>
+                        Welcome Back,
+                        <span>Alishba!</span>
+                        <span class="wave">👋</span>
+                    </h1>
+
+                    <p>
+                        Manage your personal library, discover your favorite
+                        books and keep track of your borrowing history.
+                    </p>
+
+                    <button class="primary-btn" data-target="my-books">
+                        Explore My Library
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Decorative Books -->
+                <div class="welcome-books">
+
+                    <div class="book-stack">
+
+                        <div class="stack-book book-one">
+                            <span></span>
+                        </div>
+
+                        <div class="stack-book book-two">
+                            <span></span>
+                        </div>
+
+                        <div class="stack-book book-three">
+                            <span></span>
+                        </div>
+
+                        <div class="stack-book book-four">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                    <div class="plant">
+                        🌿
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 STATISTICS
+            ========================== -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+
+                    <div>
+                        <span>Total Books</span>
+                        <h3 id="totalBooks">48</h3>
+                        <small>Books in your library</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <div>
+                        <span>Available</span>
+                        <h3 id="availableBooks">48</h3>
+                        <small>Books are available</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+
+                    <div>
+                        <span>Borrowed</span>
+                        <h3 id="borrowedBooks">0</h3>
+                        <small>Currently borrowed</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon pink">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <div>
+                        <span>Categories</span>
+                        <h3>8</h3>
+                        <small>Different categories</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 FEATURED BOOKS
+            ========================== -->
+            <div class="content-card featured-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </span>
+
+                        <div>
+                            <h2>Featured Books</h2>
+                            <p>Popular books from your library</p>
+                        </div>
+                    </div>
+
+                    <div class="slider-controls">
+
+                        <button class="see-all-btn" data-category="all">
+                            View All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <button class="slider-btn previous-featured">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+
+                        <button class="slider-btn next-featured">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="books-slider" id="featuredBooks">
+
+                    <!-- Featured books will be displayed here -->
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CATEGORY ROWS
+            ========================== -->
+
+            <div class="category-book-sections" id="dashboardCategories">
+
+
+                <!-- FICTION -->
+                <div class="content-card category-row" data-category="Fiction">
+
+                    <div class="category-heading">
+
+                        <div class="category-title">
+
+                            <span class="category-icon fiction-icon">
+                                <i class="fa-solid fa-book"></i>
+                            </span>
+
+                            <div>
+                                <h2>Fiction</h2>
+                                <p>Stories that take you to another world</p>
+                            </div>
+
+                        </div>
+
+                        <button class="see-all-btn" data-category="Fiction">
+                            See All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-books" data-books="Fiction">
+                        <!-- Books will be added with React/JS -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- SCIENCE -->
+                <div class="content-card category-row" data-category="Science">
+
+                    <div class="category-heading">
+
+                        <div class="category-title">
+
+                            <span class="category-icon science-icon">
+                                <i class="fa-solid fa-flask"></i>
+                            </span>
+
+                            <div>
+                                <h2>Science</h2>
+                                <p>Explore science and discoveries</p>
+                            </div>
+
+                        </div>
+
+                        <button class="see-all-btn" data-category="Science">
+                            See All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-books" data-books="Science">
+                        <!-- Books will be added with React/JS -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- HISTORY -->
+                <div class="content-card category-row" data-category="History">
+
+                    <div class="category-heading">
+
+                        <div class="category-title">
+
+                            <span class="category-icon history-icon">
+                                <i class="fa-solid fa-landmark"></i>
+                            </span>
+
+                            <div>
+                                <h2>History</h2>
+                                <p>Discover the stories of the past</p>
+                            </div>
+
+                        </div>
+
+                        <button class="see-all-btn" data-category="History">
+                            See All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-books" data-books="History">
+                        <!-- Books will be added with React/JS -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- TECHNOLOGY -->
+                <div class="content-card category-row" data-category="Technology">
+
+                    <div class="category-heading">
+
+                        <div class="category-title">
+
+                            <span class="category-icon technology-icon">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </span>
+
+                            <div>
+                                <h2>Technology</h2>
+                                <p>Learn about technology and innovation</p>
+                            </div>
+
+                        </div>
+
+                        <button class="see-all-btn" data-category="Technology">
+                            See All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-books" data-books="Technology">
+                        <!-- Books will be added with React/JS -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- MYSTERY -->
+                <div class="content-card category-row" data-category="Mystery">
+
+                    <div class="category-heading">
+
+                        <div class="category-title">
+
+                            <span class="category-icon mystery-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+
+                            <div>
+                                <h2>Mystery</h2>
+                                <p>Uncover secrets and mysteries</p>
+                            </div>
+
+                        </div>
+
+                        <button class="see-all-btn" data-category="Mystery">
+                            See All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-books" data-books="Mystery">
+                        <!-- Books will be added with React/JS -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- EDUCATION -->
+                <div class="content-card category-row" data-category="Education">
+
+                    <div class="category-heading">
+
+                        <div class="category-title">
+
+                            <span class="category-icon education-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </span>
+
+                            <div>
+                                <h2>Education</h2>
+                                <p>Books for learning and growth</p>
+                            </div>
+
+                        </div>
+
+                        <button class="see-all-btn" data-category="Education">
+                            See All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-books" data-books="Education">
+                        <!-- Books will be added with React/JS -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- ROMANCE -->
+                <div class="content-card category-row" data-category="Romance">
+
+                    <div class="category-heading">
+
+                        <div class="category-title">
+
+                            <span class="category-icon romance-icon">
+                                <i class="fa-solid fa-heart"></i>
+                            </span>
+
+                            <div>
+                                <h2>Romance</h2>
+                                <p>Stories about love and relationships</p>
+                            </div>
+
+                        </div>
+
+                        <button class="see-all-btn" data-category="Romance">
+                            See All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-books" data-books="Romance">
+                        <!-- Books will be added with React/JS -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- SELF DEVELOPMENT -->
+                <div class="content-card category-row" data-category="Self Development">
+
+                    <div class="category-heading">
+
+                        <div class="category-title">
+
+                            <span class="category-icon development-icon">
+                                <i class="fa-solid fa-seedling"></i>
+                            </span>
+
+                            <div>
+                                <h2>Self Development</h2>
+                                <p>Grow your skills and mindset</p>
+                            </div>
+
+                        </div>
+
+                        <button class="see-all-btn" data-category="Self Development">
+                            See All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="category-books" data-books="Self Development">
+                        <!-- Books will be added with React/JS -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MY BOOKS
+        ========================== -->
+        <section id="my-books" class="page-section">
+
+            <div class="page-title">
+
+                <div>
+                    <span class="page-label">LIBRARY</span>
+                    <h1>My Books</h1>
+                    <p>Browse and manage all the books in your personal library.</p>
+                </div>
+
+                <button class="primary-btn" data-target="add-book">
+                    <i class="fa-solid fa-plus"></i>
+                    Add New Book
+                </button>
+
+            </div>
+
+
+            <!-- Search & Filter -->
+            <div class="search-filter-bar">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                        type="text"
+                        id="bookSearch"
+                        placeholder="Search books by title or author..."
+                    >
+                </div>
+
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Education">Education</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Self Development">Self Development</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="all">All Status</option>
+                    <option value="available">Available</option>
+                    <option value="borrowed">Borrowed</option>
+                </select>
+
+            </div>
+
+
+            <div class="all-books-grid" id="allBooksGrid">
+                <!-- All books will be displayed here -->
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CATEGORIES
+        ========================== -->
+        <section id="categories" class="page-section">
+
+            <div class="page-title">
+
+                <div>
+                    <span class="page-label">EXPLORE</span>
+                    <h1>Categories</h1>
+                    <p>Browse your library by category.</p>
+                </div>
+
+            </div>
+
+
+            <div class="categories-grid">
+
+                <button class="category-card" data-category="Fiction">
+                    <span class="large-category-icon fiction-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </span>
+                    <h3>Fiction</h3>
+                    <span>6 Books</span>
+                </button>
+
+
+                <button class="category-card" data-category="Science">
+                    <span class="large-category-icon science-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </span>
+                    <h3>Science</h3>
+                    <span>6 Books</span>
+                </button>
+
+
+                <button class="category-card" data-category="History">
+                    <span class="large-category-icon history-icon">
+                        <i class="fa-solid fa-landmark"></i>
+                    </span>
+                    <h3>History</h3>
+                    <span>6 Books</span>
+                </button>
+
+
+                <button class="category-card" data-category="Technology">
+                    <span class="large-category-icon technology-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </span>
+                    <h3>Technology</h3>
+                    <span>6 Books</span>
+                </button>
+
+
+                <button class="category-card" data-category="Mystery">
+                    <span class="large-category-icon mystery-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <h3>Mystery</h3>
+                    <span>6 Books</span>
+                </button>
+
+
+                <button class="category-card" data-category="Education">
+                    <span class="large-category-icon education-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </span>
+                    <h3>Education</h3>
+                    <span>6 Books</span>
+                </button>
+
+
+                <button class="category-card" data-category="Romance">
+                    <span class="large-category-icon romance-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                    <h3>Romance</h3>
+                    <span>6 Books</span>
+                </button>
+
+
+                <button class="category-card" data-category="Self Development">
+                    <span class="large-category-icon development-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </span>
+                    <h3>Self Development</h3>
+                    <span>6 Books</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             BORROW HISTORY
+        ========================== -->
+        <section id="borrow-history" class="page-section">
+
+            <div class="page-title">
+
+                <div>
+                    <span class="page-label">ACTIVITY</span>
+                    <h1>Borrow History</h1>
+                    <p>Track all your borrowed and returned books.</p>
+                </div>
+
+            </div>
+
+
+            <div class="history-summary">
+
+                <div class="history-stat">
+                    <span>
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    <div>
+                        <strong id="historyBorrowedCount">0</strong>
+                        <small>Currently Borrowed</small>
+                    </div>
+                </div>
+
+
+                <div class="history-stat">
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                    <div>
+                        <strong id="historyReturnedCount">0</strong>
+                        <small>Returned Books</small>
+                    </div>
+                </div>
+
+
+                <div class="history-stat">
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                    </span>
+                    <div>
+                        <strong id="historyTotalCount">0</strong>
+                        <small>Total Records</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="content-card history-card">
+
+                <div class="table-heading">
+
+                    <h2>Borrowing Records</h2>
+
+                    <div class="history-tools">
+
+                        <div class="small-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input
+                                type="text"
+                                id="historySearch"
+                                placeholder="Search history..."
+                            >
+                        </div>
+
+                        <select id="historyFilter">
+                            <option value="all">All</option>
+                            <option value="borrowed">Borrowed</option>
+                            <option value="returned">Returned</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Book</th>
+                                <th>Author</th>
+                                <th>Borrow Date</th>
+                                <th>Return Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="historyTableBody">
+                            <!-- History records will be inserted here -->
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ADD BOOK
+        ========================== -->
+        <section id="add-book" class="page-section">
+
+            <div class="page-title">
+
+                <div>
+                    <span class="page-label">LIBRARY MANAGEMENT</span>
+                    <h1>Add New Book</h1>
+                    <p>Add a new book to your personal library.</p>
+                </div>
+
+            </div>
+
+
+            <div class="content-card form-card">
+
+                <form id="addBookForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="bookTitle">
+                                Book Title <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bookTitle"
+                                name="bookTitle"
+                                placeholder="Enter book title"
+                            >
+
+                            <small class="error-message" id="bookTitleError"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bookAuthor">
+                                Author <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bookAuthor"
+                                name="bookAuthor"
+                                placeholder="Enter author name"
+                            >
+
+                            <small class="error-message" id="bookAuthorError"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bookCategory">
+                                Category <span>*</span>
+                            </label>
+
+                            <select id="bookCategory" name="bookCategory">
+
+                                <option value="">Select category</option>
+                                <option value="Fiction">Fiction</option>
+                                <option value="Science">Science</option>
+                                <option value="History">History</option>
+                                <option value="Technology">Technology</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Education">Education</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Self Development">Self Development</option>
+
+                            </select>
+
+                            <small class="error-message" id="bookCategoryError"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="publishedYear">
+                                Published Year
+                            </label>
+
+                            <input
+                                type="number"
+                                id="publishedYear"
+                                name="publishedYear"
+                                placeholder="e.g. 2024"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="isbn">
+                                ISBN
+                            </label>
+
+                            <input
+                                type="text"
+                                id="isbn"
+                                name="isbn"
+                                placeholder="Enter ISBN"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bookImage">
+                                Book Cover
+                            </label>
+
+                            <input
+                                type="file"
+                                id="bookImage"
+                                name="bookImage"
+                                accept="image/*"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group full-width">
+
+                        <label for="bookDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="bookDescription"
+                            name="bookDescription"
+                            rows="5"
+                            placeholder="Enter a short description about the book..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button type="reset" class="secondary-btn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="primary-btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Add Book
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+        <section id="contact" class="page-section">
+
+            <div class="page-title">
+
+                <div>
+                    <span class="page-label">GET IN TOUCH</span>
+                    <h1>Contact Us</h1>
+                    <p>Have a question or suggestion? We'd love to hear from you.</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-layout">
+
+
+                <!-- Contact Form -->
+                <div class="content-card form-card">
+
+                    <form id="contactForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="contactName">
+                                    Full Name <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    placeholder="Enter your full name"
+                                >
+
+                                <small class="error-message" id="contactNameError"></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="contactEmail">
+                                    Email Address <span>*</span>
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    placeholder="Enter your email"
+                                >
+
+                                <small class="error-message" id="contactEmailError"></small>
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="contactSubject">
+                                    Subject <span>*</span>
+                                </label>
+
+                                <select id="contactSubject">
+
+                                    <option value="">Select subject</option>
+                                    <option value="General Question">General Question</option>
+                                    <option value="Book Suggestion">Book Suggestion</option>
+                                    <option value="Technical Issue">Technical Issue</option>
+                                    <option value="Other">Other</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="contactMessage">
+                                    Message <span>*</span>
+                                </label>
+
+                                <textarea
+                                    id="contactMessage"
+                                    rows="7"
+                                    placeholder="Type your message here..."
+                                ></textarea>
+
+                                <small class="error-message" id="contactMessageError"></small>
+
+                            </div>
+
+                        </div>
+
+
+                        <button type="submit" class="primary-btn">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Contact Information -->
+                <div class="contact-info-card">
+
+                    <div class="contact-illustration">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+
+                    <h2>Get in Touch</h2>
+
+                    <p>
+                        We're here to help you manage your personal library better.
+                    </p>
+
+
+                    <div class="contact-info-item">
+
+                        <span>
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+
+                        <div>
+                            <small>Email</small>
+                            <strong>support@mybooklibrary.com</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span>
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+
+                        <div>
+                            <small>Phone</small>
+                            <strong>+92 300 1234567</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+
+                        <div>
+                            <small>Location</small>
+                            <strong>Lahore, Pakistan</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         BOOK DETAILS MODAL
+    ========================== -->
+    <div class="modal-overlay" id="bookModal">
+
+        <div class="book-modal">
+
+            <button class="modal-close" id="closeBookModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-book-content">
+
+                <div class="modal-book-cover">
+                    <img id="modalBookImage" src="" alt="Book Cover">
+                </div>
+
+                <div class="modal-book-info">
+
+                    <span class="modal-category" id="modalBookCategory">
+                        Fiction
+                    </span>
+
+                    <h2 id="modalBookTitle">
+                        Book Title
+                    </h2>
+
+                    <p class="modal-author">
+                        By <strong id="modalBookAuthor">Author Name</strong>
+                    </p>
+
+                    <div class="modal-details">
+
+                        <div>
+                            <span>Published</span>
+                            <strong id="modalBookYear">2024</strong>
+                        </div>
+
+                        <div>
+                            <span>Status</span>
+                            <strong id="modalBookStatus">Available</strong>
+                        </div>
+
+                    </div>
+
+                    <p class="modal-description" id="modalBookDescription">
+                        Book description will appear here.
+                    </p>
+
+                    <button class="primary-btn modal-borrow-btn" id="modalBorrowBtn">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Borrow Book
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         SUCCESS TOAST
+    ========================== -->
+    <div class="toast" id="toast">
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div>
+            <strong id="toastTitle">Success</strong>
+            <p id="toastMessage">Action completed successfully.</p>
+        </div>
+
+        <button id="closeToast">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT FILE
+    ========================== -->
+    <script src="script.js"></script>
+
+</body>
+</html>
